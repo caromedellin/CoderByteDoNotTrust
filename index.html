@@ -38,67 +38,7 @@
         <p id="change"></p>
     </div>
 
-<script type="text/javascript">
 
-function Rabbit(adjective) {
-    this.adjective = adjective;
-    this.description = function (){
-      console.log("I am a" + this.adjective + Rabbit);
-    };
-}
- var rabbit1 = new Rabbit ("funny");
- var rabbit2 = new Rabbit ("loco");
- var rabbit3 = new Rabbit ("serious");
-
- function Animal (name, type){
-  this.name = name;
-  this.type = type;
- }
-
- var animalArr = new Array ();
- animalArr [0] = new Animal ("Carolina", "raccon");
- animalArr [1] = new Animal ("S", "dog");
- animalArr [2] = new  Animal ("Dosha", "dog");
-
- var printAnimal = function (animal){
-    console.log(Animal.type);
- };
-
- printAnimal("Carolina");
-
-
-
-var carolinaStats = new Object ();
-  carolinaStats.age = 27;
-  carolinaStats.altura = 1.58;
-  carolinaStats.ojos = "cafes";
-
- var james = {
-    job: "programmer",
-    married: false,
-    sayJob: function() {
-        // complete this method
-        this.job=job;
-        console.log("Hi, I work as a "+ this.job);
-    }
-};
-
-// james' first job
-james.sayJob(james.job);
-
-function dLv (dud,din,dep,gme){
-  this.dud = dud;
-  this.din = din;
-  this.dep = dep;
-  this.gme = gme;
-}
-
-dLv.prototype.calcB = function () {
-  var pot = (this.din / this.dep) + this.gme;
-}
-
-
-</script>
 
 <header>After this secretly</header>
 <h4>there will be in JavaScript which is a terrible practice some CoderByte exercises, just because I like working secretly and 'comon you con see this in the inpect element kind</h4>
@@ -107,7 +47,201 @@ Hey I'm trying to apply for some coding bootcamps so I promise this at some poin
 <script type="text/javascript">
 //The horrible practice of in html JavaScript don't do this at home or while wearing a costume
 
-</script>
+//First CoderByte function to Reverse a String
+function ReverseString (str){
+  str = str.split(" ");
+  str = str.reverse();
+  str = str.join(" ");
+  return str;
+  
+}
+
+//FIRST FACTORIAL
+//for this one was important to put a parentesis in (num-1)
+
+function firstFactorial(num){
+   if(num === 0){
+    num = 1;
+   } else {
+      for(var i = (num -1); i > 1; i--){
+      num *= i;
+     }
+   }
+   return num;
+}
+
+//LONGEST WORD = find the longest word in a string and report the length.
+
+function longestWord (sen){
+  var longest = "";
+  
+  sen = sen.replace(/[^a-z,A-Z,0-9\s]/g," ");
+  sen = sen.split(" "); //hace a str un array
+  for(var i = 0; i < sen.length; i++){
+    if(sen[i].length > longest.length){
+      longest = sen[i];
+      
+    }
+    return longest;
+  }
+
+}
+
+//Letter Changes
+//cambiar el orden de las letras para que imprima la siguiente y las vocales las ponga mayusculas
+function strReplace(str){
+  var alpha = "abcdefghijklmopqrstuvwxyz"
+  var vocales = "aeiou"
+  str = str.replace(/[^a-z,A-Z,]/g," ");
+  str = str.split(" ");
+  for(var i = 0; i < str.length ; i ++){
+
+  }
+  return str;
+}
+
+
+
+</script><!--CODERBYTE SCRIPT EX∫ -->
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">ReverseString</div>
+    <div class="panel-body">
+      <p>
+        function ReverseString (str){
+        str = str.split(" ");
+        str = str.reverse();
+        str = str.join(" ");
+        return str;
+    }
+      </p>
+  </div><!--Reverse String -->
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">firstFactorial</div>
+    <div class="panel-body">
+      <p>
+        function firstFactorial(num){
+   if(num === 0){
+    num = 1;
+   } else {
+      for(var i = (num -1); i > 1; i--){
+      num *= i;
+     }
+   }
+   return num;
+}
+      </p>
+  </div><!--firstFactorial -->
+
+   <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">longestWord</div>
+    <div class="panel-body">
+      <p>
+       function longestWord (sen){
+  var longest = "";
+  
+  sen = sen.replace(/[^a-z,A-Z,0-9\s]/g," ");
+  sen = sen.split(" "); //hace a str un array
+  for(var i = 0; i < sen.length; i++){
+    if(sen[i].length > longest.length){
+      longest = sen[i];
+      
+    }
+    return longest;
+  }
+
+}
+      </p>
+  </div><!--longestWord -->
+
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Letter Changes</div>
+    <div class="panel-body">
+      <p>
+       function LetterChanges(str) {
+
+    var alpha = "abcdefghijklmnopqrstuvwxyz";
+    var newAlpha = "bcdEfghIjklmnOpqrstUvwxyzA";
+    var answer = "";
+    
+    for (i = 0, i < str.length; i++) {
+        if (alpha.indexOf(str[i]) !== -1) {
+            answer += newAlpha.charAt(alpha.indexOf(str[i]));
+        } else {
+            answer += str[i];
+        }
+    }
+    return answer;
+}
+
+      </p>
+  </div><!--Letter Changes -->
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Another Function</div>
+    <div class="panel-body">
+      <p>
+       function goes here
+       
+      </p>
+  </div><!--Another Function -->
+
+<script type="text/javascript"></script>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Another Function</div>
+    <div class="panel-body">
+      <p>
+       function goes here
+       
+      </p>
+  </div><!--Another Function -->
+
+<script type="text/javascript"></script>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Another Function</div>
+    <div class="panel-body">
+      <p>
+       function goes here
+       
+      </p>
+  </div><!--Another Function -->
+
+<script type="text/javascript"></script>
+
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Another Function</div>
+    <div class="panel-body">
+      <p>
+       function goes here
+       
+      </p>
+  </div><!--Another Function -->
+
+<script type="text/javascript"></script>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Another Function</div>
+    <div class="panel-body">
+      <p>
+       function goes here
+       
+      </p>
+  </div><!--Another Function -->
+
+<script type="text/javascript"></script>
+
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
